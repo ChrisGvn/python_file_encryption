@@ -41,7 +41,7 @@ And that is it. We are ready to use our user generated key with Fernet: `f = Fer
 
 #### ii) The Salt
 
-Because I need the encryprion to be reversible and I don't intend to store a key file, generating a salt randomly with a line 
+Because I need the encryption to be reversible and I don't intend to store a key file, generating a salt randomly with a line 
 like `salt = os.urandom(16)` is not wise. 
 This is why back in the PBKDF2HMAC init, I fed the user's input to the salt variable: `salt=userinput`. 
 
